@@ -1,7 +1,7 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: '/', key: 'home', label: 'Home' },
-  { href: '/', key: 'spots', label: 'Daftar Spot' },
+  { href: '/Spot', key: 'spots', label: 'Daftar Spot' },
   { href: '/', key: 'services', label: 'Layanan & Tiket' },
   { href: '/', key: 'rent ', label: 'Penyewaan' },
   { href: '/', key: 'contact', label: 'Kontak' },

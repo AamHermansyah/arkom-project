@@ -6,18 +6,22 @@ const Hero = () => {
     <section className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
 
       <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
-      <Image 
-          src='/ikon-1.png'
-          alt='ikon1'
-          width={63}
-          height={75}
-          className='absolute right-[50%] lg:-right-[50%] top-[5%]'
-        />
+
       
         <h1 className="text-6xl lg:text-8x1 font-semibold" style={{color: '#0B7947'}}>Destinasi Wisata Curug Badak</h1>
         <p className="text-sm lg:text-16 mt-6 text-gray-30 xl:max-w-[520px]">
           Kepuasan alam yang tak akan pernah anda dapatkan sebelumnya. Kami dapat membantu anda untuk menemukan keindahan alam sekitar yang dapat anda rasakan setiap saat.
         </p>
+      </div>
+
+      <div>
+        <Image 
+            src='/ikon-1.png'
+            alt='ikon1'
+            width={63}
+            height={75}
+            className=''
+          />
       </div>
 
       <div className="relative flex flex-1 items-start">

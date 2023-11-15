@@ -24,12 +24,15 @@ const Navbar = () => {
       </ul>
 
       <div className="lg:flexCenter hidden">
-        <Button
-          type="button"
-          title="Login"
-          icon="/user.svg"
-          variant="btn_dark_green"
-        />
+        <a href="">
+          <Button
+            type="button"
+            title="Login"
+            icon="/user.svg"
+            variant="btn_dark_green"
+          />
+        </a>
+
       </div>
 
       <Image

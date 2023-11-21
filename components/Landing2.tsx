@@ -17,6 +17,7 @@ function Landing2() {
                   <p className='xl:max-w-[100%] text-xl mx-auto' style={{color: 'white', padding: '75px'}}>Curug memang identik dengan lokasi tengah hutan dengan ketinggian yang begitu lumayan seperti air terjun curug badak ini. Deretan pohon pinus yang rindang dan sejuknya suasana air terjun membuat pengunjung serasa tersesat di hutan terpencil. Curug badak memiliki udara yang bersih dan dapat menghirup udara segar yang tidak tercemar asap rokok, baik polusi kendaraan maupun asap industri dan rokok. Apalagi jika wisatawan datang pada pagi hari, saat udara masih sangat segar, embun yang menggantung di pepohonan, dan pancaran air Curug Badak yang sangat dingin. Ini akan menambah kesan yang sangat alami.</p>
                 </div>
 
+                
             </div>
         </section>
     </div>

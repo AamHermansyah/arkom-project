@@ -12,13 +12,25 @@ function Landingpage() {
             />
 
             <div className='w-full absolute p-12'>
-                <h2 className="bold-40 lg:bold-64 xl:max-w-[100%] text-center" style={{color: 'white', padding: '100px', textShadow: '5px 5px black'}}>Dunia ini nggak hanya seluas meja kerja. Kamu harus ambil cuti untuk liburan segera</h2>
+                <h2 className="bold-40 lg:bold-64 xl:max-w-[100%] text-center" style={{color: 'white', padding: '100px', textShadow: '5px 5px black'}}>"Curug Badak, surga tersembunyi di Tasikmalaya yang wajib kamu kunjungi"</h2>
 
-                <div className='flex justify-center'>
+                <div className='flex justify-center gap-[150px] mt-[5%]'>
                     <a href=''>
-                        <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" style={{width: '350px', height: '50px'}}>
-                            Curug Badak
-                        </button>
+                        <div className="w-[262px] h-[60px] px-[25px] py-[15px] bg-green-700 rounded-[15px] justify-center items-center gap-2.5 inline-flex">
+                            <div className="text-white text-xl font-semibold leading-tight tracking-tight">Kenapa?</div>
+                        </div>
+                    </a>
+                    
+                    <a href=''>
+                        <div className="w-[262px] h-[60px] px-[25px] py-[15px] bg-green-700 rounded-[15px] shadow-inner justify-center items-center gap-2.5 inline-flex">
+                            <div className="text-white text-xl font-semibold leading-tight tracking-tight">Sewa Tempat</div>
+                        </div>
+                    </a>
+
+                    <a href=''>
+                        <div className="w-[262px] h-[60px] px-[25px] py-[15px] bg-green-700 rounded-[15px] shadow-inner justify-center items-center gap-2.5 inline-flex">
+                            <div className="text-white text-xl font-semibold leading-tight tracking-tight">Beli Tiket</div>
+                        </div>
                     </a>
                 </div>
             </div>

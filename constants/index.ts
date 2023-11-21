@@ -1,8 +1,8 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: '/', key: 'home', label: 'Home' },
-  { href: '/Spot', key: 'spot', label: 'Daftar Spot' },
-  { href: '/', key: 'ticket', label: 'Layanan & Tiket' },
+  { href: '/spot', key: 'spot', label: 'Daftar Spot' },
+  { href: '/tiket', key: 'ticket', label: 'Layanan & Tiket' },
   { href: '/rent', key: 'rent ', label: 'Penyewaan' },
   { href: '/', key: 'contact', label: 'Kontak' },
 ];

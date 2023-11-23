@@ -4,7 +4,7 @@ import React from 'react'
 function Landing2() {
   return (
     <div>
-        <section>
+        <section id='landing2'>
             <div className='relative w-full aspect-video'>
                 <Image 
                   src='/latarland2.png'

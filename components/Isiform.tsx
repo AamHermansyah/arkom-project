@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react";
 
-function Tiket() {
+function Isiform() {
   return (
     <div>
       <section>
-        <div className='flex item-center justify-center text-white'>
-            <div className="w-[1180px] h-[580px] flex flex-col items-center justify-center bg-green-700 rounded-[20px]">
-              <h1 className='text-[40px] font-semibold leading-[100px] tracking-tigh text-cente'>Beli Tiket</h1>
+        <div className="flex item-center justify-center text-white">
+          <div className="w-[1180px] h-[580px] flex flex-col items-center justify-center bg-green-700 rounded-[20px]">
+            <h1 className="text-[40px] font-semibold leading-[100px] tracking-tigh text-cente">
+              Beli Tiket
+            </h1>
 
-              <div className='flex items-center justify-center'>
+            <div className="flex items-center justify-center">
               <form>
                 <div className="grid md:grid-cols-2 md:gap-6">
                   <div className="relative z-0 w-full mb-6 group">
@@ -98,22 +100,21 @@ function Tiket() {
                   </div>
 
                   <button
-                            type="submit"
-                            className='w-[460px] h-10 px-[142px] py-2.5 bg-blue-400 rounded-[5px] justify-center items-center gap-2.5 inline-flex'
-                        >
-                            <div className="text-white text-xl font-semibold leading-tight tracking-tight">Submit</div>
-                        </button>
+                    type="submit"
+                    className="w-[460px] h-10 px-[142px] py-2.5 bg-blue-400 rounded-[5px] justify-center items-center gap-2.5 inline-flex"
+                  >
+                    <div className="text-white text-xl font-semibold leading-tight tracking-tight">
+                      Submit
+                    </div>
+                  </button>
                 </div>
-
               </form>
             </div>
-            </div>
-
-            
+          </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default Tiket
+export default Isiform;

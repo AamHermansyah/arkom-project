@@ -4,7 +4,7 @@ import React from 'react'
 function About() {
   return (
     <div>
-        <section className='text-center mt-[10%]'>
+        <section className='text-center mt-[10%]' id='contactus'>
             <div>
                 <h1 className="bold-40 lg:bold-64 mt-[5%]" style={{color: '#0B7947'}}>Contact Us On</h1>
             </div>

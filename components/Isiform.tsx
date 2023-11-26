@@ -6,7 +6,7 @@ function Isiform() {
       <section>
         <div className="flex item-center justify-center text-white">
           <div className="w-[1180px] h-[580px] flex flex-col items-center justify-center bg-green-700 rounded-[20px]">
-            <h1 className="text-[40px] font-semibold leading-[100px] tracking-tigh text-cente">
+            <h1 className="text-[40px] font-semibold leading-[100px] tracking-tigh text-center">
               Beli Tiket
             </h1>
 
@@ -15,14 +15,13 @@ function Isiform() {
                 <div className="grid md:grid-cols-2 md:gap-6">
                   <div className="relative z-0 w-full mb-6 group">
                     <label
-                      htmlFor="floating_phone"
+                      htmlFor=""
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                       Nama Lengkap
                     </label>
                     <input
-                      type="text"
-                      pattern="nama"
+                      type=""
                       name="nama_lengkap"
                       id="nama_lengkap"
                       className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
@@ -39,7 +38,7 @@ function Isiform() {
                     </label>
 
                     <input
-                      type="text"
+                      type="date"
                       name="floating_company"
                       id="floating_company"
                       className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
@@ -98,15 +97,13 @@ function Isiform() {
                       required
                     />
                   </div>
-
-                  <button
-                    type="submit"
-                    className="w-[460px] h-10 px-[142px] py-2.5 bg-blue-400 rounded-[5px] justify-center items-center gap-2.5 inline-flex"
-                  >
-                    <div className="text-white text-xl font-semibold leading-tight tracking-tight">
-                      Submit
-                    </div>
-                  </button>
+                  <a href="/pembayaran" type="submit">
+                    <button className="w-[460px] h-10 px-[142px] py-2.5 bg-blue-400 rounded-[5px] justify-center items-center gap-2.5 inline-flex">
+                      <div className="text-white text-xl font-semibold leading-tight tracking-tight">
+                        Next
+                      </div>
+                    </button>
+                  </a>
                 </div>
               </form>
             </div>

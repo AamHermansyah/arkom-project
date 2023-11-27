@@ -1,6 +1,6 @@
 import React from "react";
 
-function Isiform() {
+function IsiForm() {
   return (
     <div>
       <section>
@@ -114,4 +114,4 @@ function Isiform() {
   );
 }
 
-export default Isiform;
+export default IsiForm;

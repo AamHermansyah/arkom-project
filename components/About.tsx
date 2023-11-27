@@ -1,38 +1,23 @@
-import Image from 'next/image'
 import React from 'react'
 
 function About() {
   return (
-    <div>
-        <section className='text-center mt-[10%]' id='contactus'>
-            <div>
-                <h1 className="bold-40 lg:bold-64 mt-[5%]" style={{color: '#0B7947'}}>Contact Us On</h1>
-            </div>
+    <div className='p-20 flex justify-between items-center gap-20 bg-green-700'>
+      <div className="basis-[35%]">
+        <img
+          className="w-full aspect-[3/4]"
+          src="/about/land3-1.png"
+        />
+      </div>
 
-            <div className='mt-3'>
-                <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 bold-40 rounded-full text-sm text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" style={{width: '35%', height: '55px', position: 'relative'}}>
-                    <div>
-                    <img
-                        src='/logowa.png'
-                        alt="logo wa"
-                        style={{
-                            width: '30px',
-                            height: 'auto', 
-                            position: 'absolute',
-                            left: '20%', 
-                            top: '50%', 
-                            transform: 'translateY(-50%)'
-                        }}
-                    />
-                    </div>
-                    <span>WhatsApp</span>     
-                </button>
-
-                <div>
-                <h1 className="bold-40 lg:bold-64" style={{color: '#0B7947'}}>08xx xxxx xxxx</h1>
-                </div>
-            </div>
-        </section>
+      <div className="basis-[65%] rounded-[15px] text-white">
+        <h1 className='text-white text-[90px] font-semibold leading-[100px] tracking-tight'>Curug Badak</h1>
+        <div className="text-white text-xl font-normal leading-[30px] tracking-tight space-y-8 mt-10">
+          <p>Curug Badak adalah salah satu objek wisata alam yang populer di Tasikmalaya, Jawa Barat. Curug ini terletak di Desa Sukasetia, Kecamatan Cisayong, sekitar 30 kilometer dari pusat kota Tasikmalaya. Curug Badak memiliki ketinggian sekitar 35 meter dengan dua aliran air terjun yang jatuh dari atas tebing.</p>
+          <p>Air terjunnya mengalir dengan deras dan jernih, sehingga sangat menyegarkan. Di bawah curug terdapat kolam alami yang bisa digunakan untuk berenang atau berendam.</p>
+          <p>Selain keindahan air terjunnya, Curug Badak juga dikelilingi oleh hutan pinus yang asri. Udara di sekitar curug sangat sejuk dan segar, sehingga sangat cocok untuk melepas penat dari hiruk pikuk kota.</p>
+        </div>
+      </div>
     </div>
   )
 }

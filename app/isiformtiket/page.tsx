@@ -1,10 +1,9 @@
-import Isiform from "@/components/Isiform";
-import React from "react";
+import IsiForm from "@/components/Isiform";
 
 function page() {
   return (
     <div>
-      <Isiform />
+      <IsiForm />
     </div>
   );
 }

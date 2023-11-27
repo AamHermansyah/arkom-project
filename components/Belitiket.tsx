@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-function Belitiket() {
+function BeliTiket() {
   return (
     <div>
       <section>
@@ -48,4 +48,4 @@ function Belitiket() {
   );
 }
 
-export default Belitiket;
+export default BeliTiket;

@@ -1,12 +1,7 @@
-import Belitiket from '@/components/Belitiket'
-import React from 'react'
+import BeliTiket from "@/components/Belitiket";
 
 function page() {
-  return (
-    <>
-       <Belitiket /> 
-    </>
-  )
+  return <BeliTiket />;
 }
 
 export default page

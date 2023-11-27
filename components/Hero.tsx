@@ -1,59 +1,54 @@
-import Image from 'next/image'
-import Button from './Button'
+import Image from "next/image";
+import React from "react";
 
-const Hero = () => {
+function Landingpage() {
   return (
-    <section className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
+    <section>
+      <div className="relative w-full aspect-video">
+        <Image src="/latar1.png" alt="latar1" fill={true} />
 
-      <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
+        <div className="w-full absolute p-12">
+          <h2
+            className="bold-40 lg:bold-64 xl:max-w-[100%] text-center"
+            style={{
+              color: "white",
+              padding: "100px",
+              textShadow: "5px 5px black",
+            }}
+          >
+            "Curug Badak, surga tersembunyi di Tasikmalaya yang wajib kamu
+            kunjungi"
+          </h2>
 
-      
-        <h1 className="text-6xl lg:text-8x1 font-semibold" style={{color: '#0B7947'}}>Destinasi Wisata Curug Badak</h1>
-        <p className="text-sm lg:text-16 mt-6 text-gray-30 xl:max-w-[520px]">
-          Kepuasan alam yang tak akan pernah anda dapatkan sebelumnya. Kami dapat membantu anda untuk menemukan keindahan alam sekitar yang dapat anda rasakan setiap saat.
-        </p>
-      </div>
-
-      <div>
-        <Image 
-            src='/ikon-1.png'
-            alt='ikon1'
-            width={63}
-            height={75}
-            className=''
-          />
-      </div>
-
-      <div className="relative flex flex-1 items-start">
-        <div className="relative md:left-[60%] z-20 flex w-full max-w-[268px] flex-col gap-4 rounded-3xl bg-green-90 px-7 py-8">
-          <div className="flex flex-col">
-            <div>
-              <div className="flexBetween">
-                <p className="regular-16 text-gray-20">Lokasi</p>
-                <Image src="/close.svg" alt="close" width={24} height={24} />
+          <div className="flex justify-center gap-[150px] mt-[5%]">
+            <a href="/sewa">
+              <div className="w-[262px] h-[60px] px-[25px] py-[15px] bg-green-700 rounded-[15px] shadow-inner justify-center items-center gap-2.5 inline-flex">
+                <div className="text-white text-xl font-semibold leading-tight tracking-tight">
+                  Sewa Tempat
+                </div>
               </div>
-              <p className="bold-20 text-white">Curug Badak</p>
-            </div>
-            <div className="flex flex-col">
-              <p className="regular-16 block text-gray-20">Dari</p>
-              <p className="bold-20 text-white">Universitas Siliwangi</p>
-            </div>
-          </div>
-          <div className="border-dashed border-b-2 border-gray-500" />
-          <div className="space-y-2">
-            <div className="flex flex-col">
-              <p className="regular-16 block text-gray-20">Jarak</p>
-              <p className="bold-20 text-white">173.28 mi</p>
-            </div>
-            <div className="flex flex-col">
-              <p className="regular-16 block text-gray-20">Waktu Tempuh</p>
-              <p className="bold-20 text-white">2 Jam 30 Menit</p>
-            </div>
+            </a>
+
+            <a href="#landing2">
+              <div className="w-[262px] h-[60px] px-[25px] py-[15px] bg-green-700 rounded-[15px] justify-center items-center gap-2.5 inline-flex">
+                <div className="text-white text-xl font-semibold leading-tight tracking-tight">
+                  Kenapa?
+                </div>
+              </div>
+            </a>
+
+            <a href="/belitiket">
+              <div className="w-[262px] h-[60px] px-[25px] py-[15px] bg-green-700 rounded-[15px] shadow-inner justify-center items-center gap-2.5 inline-flex">
+                <div className="text-white text-xl font-semibold leading-tight tracking-tight">
+                  Beli Tiket
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Landingpage;

@@ -4,7 +4,7 @@ function Signup() {
   return (
     <section>
       <div className="flex item-center justify-center text-white">
-        <div className="w-[1180px] h-[580px] bg-green-700 rounded-[20px]">
+        <div className="w-[1180px] h-[580px] bg-green-700 rounded-[20px] mt-[100px]">
           <div className="text-white text-[40px] font-semibold leading-[100px] tracking-tigh text-center">
             <h1>Sign Up</h1>
           </div>
@@ -121,7 +121,7 @@ function Signup() {
                     type="number"
                     id="nohp"
                     className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
-                    placeholder="Nama Lengkap"
+                    placeholder="No. Handphone anda"
                     required
                   />
                 </div>
@@ -137,7 +137,7 @@ function Signup() {
                     type="number"
                     id="verifno"
                     className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
-                    placeholder="Nama Lengkap"
+                    placeholder="Kode SMS"
                     required
                   />
                 </div>

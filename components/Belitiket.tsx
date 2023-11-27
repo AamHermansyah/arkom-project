@@ -5,7 +5,7 @@ function BeliTiket() {
   return (
     <div>
       <section>
-        <div className="relative w-full aspect-video">
+        <div className="relative w-full aspect-video mt-[100px]">
           <Image src="/latar1.png" alt="latar1" fill={true} objectFit="cover" />
 
           <div className="w-full absolute p-12">

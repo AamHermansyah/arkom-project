@@ -33,7 +33,7 @@ const spots = [
   },
 ];
 
-const WhyCardSlider = () => {
+const SpotCardSlider = () => {
   const swiperRef = useRef(null);
 
   const slidePrev = () => {
@@ -98,4 +98,4 @@ const WhyCardSlider = () => {
   )
 }
 
-export default WhyCardSlider
+export default SpotCardSlider

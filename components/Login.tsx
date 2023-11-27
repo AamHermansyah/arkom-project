@@ -6,7 +6,7 @@ function Login() {
     <div>
       <section>
         <div className="flex item-center justify-center text-white">
-          <div className="w-[1180px] h-[580px] flex flex-col items-center justify-center bg-green-700 rounded-[20px]">
+          <div className="w-[1180px] h-[580px] flex flex-col items-center justify-center bg-green-700 rounded-[20px] mt-[100px]">
             <h1 className="text-white text-[40px] font-semibold leading-[100px] tracking-tigh text-center">
               Login
             </h1>

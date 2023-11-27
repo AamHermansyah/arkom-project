@@ -29,7 +29,7 @@ function Landingpage() {
             </div>
           </a>
 
-          <a href="#landing2" className="inline-block -mt-10">
+          <a href="#why" className="inline-block -mt-10">
             <div className="relative w-[262px] h-[60px] px-[25px] py-[15px] bg-green-700 rounded-[15px] justify-center items-center gap-2.5 inline-flex">
               <FaArrowUp fontSize={24} className="absolute left-4 top-[50%] -translate-y-[50%]" />
               <span className="text-white text-xl font-semibold leading-tight tracking-tight">

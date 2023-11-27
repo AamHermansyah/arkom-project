@@ -1,11 +1,31 @@
+"use client"
+
 import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
+import { useEffect, useRef } from 'react';
 
 const Navbar = () => {
+  const navbarRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const navbar = navbarRef.current
+    if (navbar) {
+      const handleEventNavbar = () => {
+        navbar.classList.toggle('bg-white', window.scrollY > 0)
+      }
+
+      window.addEventListener('scroll', handleEventNavbar)
+
+      return () => {
+        window.removeEventListener('scroll', handleEventNavbar)
+      }
+    }
+  }, []);
+
   return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
+    <nav ref={navbarRef} className="fixed w-full flexBetween padding-container z-30 py-5 transition">
       <Link href="/" className="text-xl font-bold text-green-50 -mt-2">
         <Image src="/logo-1.png" alt="logo1" width={150} height={150} />
       </Link>

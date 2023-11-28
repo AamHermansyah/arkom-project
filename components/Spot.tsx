@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import SpotCardSlider from './SpotCardSlider'
+import SpotSlider from './SpotSlider'
 
 // File video simpan di folder public seperti image
 const spots = [
@@ -108,7 +108,7 @@ function Spot() {
             )}
           </div>
 
-          <SpotCardSlider
+          <SpotSlider
             data={spots}
             onChangeActiveId={setActiveId}
           />

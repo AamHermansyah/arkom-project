@@ -2,7 +2,7 @@
 export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
   { href: "/spot", key: "spot", label: "Daftar Spot" },
-  { href: "/belitiket", key: "ticket", label: "Layanan & Tiket" },
+  { href: "/tiket", key: "ticket", label: "Layanan & Tiket" },
   { href: "/sewa", key: "rent ", label: "Penyewaan" },
   { href: "#contactus", key: "contact", label: "Kontak" },
 ];

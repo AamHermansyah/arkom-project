@@ -6,34 +6,17 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-const spots = [
-  {
-    id: 1,
-    imageUrl: './Tempat/Gazebo.png'
-  },
-  {
-    id: 2,
-    imageUrl: './Tempat/cafe.png'
-  },
-  {
-    id: 3,
-    imageUrl: './Tempat/sewatenda.png'
-  },
-  {
-    id: 4,
-    imageUrl: './Tempat/hanoman.png'
-  },
-  {
-    id: 5,
-    imageUrl: './Tempat/pinus.png'
-  },
-  {
-    id: 6,
-    imageUrl: './Tempat/curug.png'
-  },
-];
+type propTypes = {
+  onChangeActiveId: (id: number) => void;
+  data: {
+    id: number;
+    imageUrl: string;
+    title: string;
+    description: string;
+  }[]
+}
 
-const SpotCardSlider = () => {
+const SpotCardSlider = ({ onChangeActiveId, data }: propTypes) => {
   const swiperRef = useRef(null);
 
   const slidePrev = () => {
@@ -80,16 +63,22 @@ const SpotCardSlider = () => {
         pagination={{ clickable: true }}
         ref={swiperRef}
       >
-        {spots.map((item) => (
+        {data.map((item) => (
           <SwiperSlide key={item.id} className="relative lg:px-10 pb-20">
-            <div key={item.id} className="overflow-hidden bg-gray-200 rounded-xl border-2">
-              <div className="relative bg-gray-200 aspect-video">
+            <div className="relative">
+              <div className="relative bg-gray-200 aspect-video rounded-xl overflow-hidden">
                 <img
                   src={item.imageUrl}
                   alt="expert"
                   className="w-full h-full object-cover"
                 />
               </div>
+              <button
+                onClick={() => onChangeActiveId(item.id)}
+                className="absolute bottom-0 left-[50%] -translate-x-[50%] translate-y-[50%] px-10 py-1.5 font-bold rounded-full bg-green-700 text-white"
+              >
+                Detail
+              </button>
             </div>
           </SwiperSlide>
         ))}

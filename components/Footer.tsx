@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="flexCenter mt-[10%]">
+    <footer className="flexCenter">
       <div className="w-full px-14 py-20 bg-gray-900 flex-col justify-center items-start gap-8 inline-flex">
         <div className="self-stretch justify-between items-start inline-flex">
           <div className="text-neutral-100 text-sm font-normal font-['Inter'] leading-[21px]">Copyright ARKOM Kel 1-2023</div>

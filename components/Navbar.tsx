@@ -35,7 +35,7 @@ const Navbar = () => {
           <Link
             href={link.href}
             key={link.key}
-            className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+            className="bg-white text-black font-bold flexCenter cursor-pointer rounded-full px-4 py-2 transition-all hover:font-bold"
           >
             {link.label}
           </Link>
@@ -48,7 +48,7 @@ const Navbar = () => {
             type="button"
             title="Login"
             icon="/user.svg"
-            variant="btn_dark_green"
+            variant="px-6 py-3 text-white"
           />
         </a>
       </div>

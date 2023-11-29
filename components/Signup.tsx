@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Signup() {
@@ -22,7 +23,7 @@ function Signup() {
                   <input
                     type="email"
                     id="email"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
+                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4"
                     placeholder="Nama Lengkap"
                     required
                   />
@@ -38,7 +39,7 @@ function Signup() {
                     type="text"
                     id="username"
                     placeholder="Username Anda"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
+                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4"
                     required
                   />
                 </div>
@@ -53,7 +54,7 @@ function Signup() {
                     type="password"
                     id="password"
                     placeholder="Alamat Anda"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
+                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4"
                     required
                   />
                 </div>
@@ -71,7 +72,7 @@ function Signup() {
                   <input
                     type="email"
                     id="email"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
+                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4"
                     placeholder="email Anda"
                     required
                   />
@@ -86,7 +87,7 @@ function Signup() {
                   <input
                     type="password"
                     id="password"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
+                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4"
                     placeholder="********"
                     required
                   />
@@ -101,7 +102,7 @@ function Signup() {
                   <input
                     type="password"
                     id="password"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
+                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4"
                     placeholder="********"
                     required
                   />
@@ -120,7 +121,7 @@ function Signup() {
                   <input
                     type="number"
                     id="nohp"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
+                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4"
                     placeholder="No. Handphone anda"
                     required
                   />
@@ -136,7 +137,7 @@ function Signup() {
                   <input
                     type="number"
                     id="verifno"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
+                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4"
                     placeholder="Kode SMS"
                     required
                   />
@@ -145,13 +146,19 @@ function Signup() {
             </div>
             <button
               type="submit"
-              className="block w-full max-w-2xl mx-auto px-10 py-2.5 bg-blue-400 rounded-[5px] justify-center items-center mt-[55px]"
+              className="block w-full max-w-2xl mx-auto px-10 py-2.5 bg-blue-400 rounded-[5px] justify-center items-center mt-4"
             >
               <div className="text-white text-xl font-semibold leading-tight tracking-tight">
                 Sign Up
               </div>
             </button>
           </form>
+          <div className="mx-auto text-center">
+            <span>Have an account?</span>{" "}
+            <Link href="/login" className="text-blue-400">
+              Login
+            </Link>
+          </div>
         </div>
       </div>
     </section>

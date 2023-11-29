@@ -4,7 +4,7 @@ export const NAV_LINKS = [
   { href: "/spot", key: "spot", label: "Daftar Spot" },
   { href: "/tiket", key: "ticket", label: "Layanan & Tiket" },
   { href: "/sewa", key: "rent ", label: "Penyewaan" },
-  { href: "#contactus", key: "contact", label: "Kontak" },
+  { href: "/contact", key: "contact", label: "Kontak" },
 ];
 
 // CAMP SECTION

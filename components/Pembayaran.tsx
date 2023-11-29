@@ -1,135 +1,130 @@
-import React from "react";
+"use client"
+
+import { useState } from "react";
+
+const paymentMethods = [
+  { id: 1, name: 'Dana', logo: '/Danalogo.png' },
+  { id: 2, name: 'Ovo', logo: '/Ovologo.png' },
+  { id: 3, name: 'Gopay', logo: '/Gopaylogo.png' },
+  { id: 4, name: 'Shoopepay', logo: '/Shoopepaylogo.png' },
+];
 
 function Pembayaran() {
+  const [paymentMethodId, setPaymentMethodId] = useState(0);
+  const [qty, setQty] = useState(1);
+  const [activeTabId, setActiveTabId] = useState(0);
+
+  const onIncrement = () => {
+    setQty((prevQty) => prevQty + 1);
+  };
+
+  const onDecrement = () => {
+    if (qty > 1) {
+      setQty((prevQty) => prevQty - 1);
+    }
+  };
+
+  const formattedPrice = new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+  });
+
   return (
-    <div>
-      <section>
-        <div className="flex item-center justify-center text-white">
-          <div className="w-[1180px] h-[580px] flex flex-col items-center justify-center bg-green-700 rounded-[20px] mt-[100px]">
-            <h1 className="text-[40px] font-semibold leading-[100px] tracking-tigh text-cente">
-              Pembayaran
-            </h1>
+    <div className="px-20 mb-10 text-white">
+      <div className="w-full flex flex-col items-center justify-center bg-green-700 rounded-2xl p-10 pb-20 mt-28">
+        <div className="w-full max-w-2xl mx-auto flex flex-col items-center gap-4">
+          {activeTabId === 0 && (
+            <>
+              <h1 className="text-[40px] font-semibold leading-[100px] tracking-tigh text-cente">
+                Pilih Pembayaran
+              </h1>
 
-            {/*form*/}
-            <div>
-              <form className="grid md:grid-cols-2 md:gap-6">
-                <button
-                  className="w-[70.33px] h-16 px-3 py-2.5 bg-white rounded-md shadow border-2
-                  border-stone-300 flex-col justify-center items-start inline-flex"
-                >
-                  <img src="/Danalogo.png" alt="Logo dana"></img>
-                </button>
-
-                <button
-                  className="w-[70.33px] h-16 px-3 py-2.5 bg-white rounded-md shadow border-2
-                  border-stone-300 flex-col justify-center items-start inline-flex"
-                >
-                  <img src="/Ovologo.png" alt="Logo Ovo"></img>
-                </button>
-              </form>
-            </div>
-
-            {/*ieu teh anu form*/}
-            <div>
-              <form>
-                <label
-                  htmlFor=""
-                  className="block mt-4 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  <img
-                    src="/Logobank.png"
-                    alt="Logo Bank"
-                    className="float-right mb-3"
-                  />
-                  Card Number
-                </label>
-                <input
-                  type="text"
-                  name="nama_lengkap"
-                  id="nama_lengkap"
-                  className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
-                  placeholder=" "
-                  required
-                />{" "}
-              </form>
-            </div>
-
-            {/*form bagian 2*/}
-            <div className="mt-2">
-              <form className="grid grid-cols-2 gap-4">
-                <div className="mb-6">
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              <div className="flex items-center flex-wrap gap-6">
+                {paymentMethods.map((payment) => (
+                  <button
+                    onClick={() => setPaymentMethodId(payment.id)}
+                    key={payment.id}
+                    className={`
+                  ${paymentMethodId === payment.id ? 'border-2 border-black' : ''}
+                  w-[70.33px] h-16 px-3 py-2.5 bg-white rounded-md shadow
+                `}
                   >
-                    Expired
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
-                    placeholder="Nama Lengkap"
-                    required
-                  />
-                </div>
-                <div className="mb-6">
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    CVC
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
-                    placeholder="Nama Lengkap"
-                    required
-                  />
-                </div>
-                <div className="mb-6">
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Country
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
-                    placeholder="Nama Lengkap"
-                    required
-                  />
-                </div>
-                <div className="mb-6">
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Nomor Pos
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 pl-4 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[460px] h-10 px-[142px] py-2.5"
-                    placeholder="Nama Lengkap"
-                    required
-                  />
-                </div>
-              </form>
-              
-              <a href="/finalbayar" className="flex justify-center">
-                <button className="w-[460px] h-10 px-[142px] py-2.5 bg-blue-400 rounded-[5px] justify-center items-center gap-2.5 inline-flex">
-                      <div className="text-white text-xl font-semibold leading-tight tracking-tight">
-                        Next
-                      </div>
+                    <img src={payment.logo} alt={`Logo ${payment.name}`} className="text-black" />
                   </button>
-              </a>
+                ))}
+              </div>
+
+              <div className="mt-2 text-center">
+                <h2 className="text-lg">Jumlah Tiket</h2>
+                <div className="flex items-center justify-between gap-4 mt-2">
+                  <button onClick={onDecrement} className="text-2xl font-bold w-10 aspect-square p-1 rounded-full bg-white text-green-500 active:scale-95 transition">
+                    -
+                  </button>
+                  <input type="text" value={qty} className="px-4 py-2 rounded text-black text-center text-lg font-bold" />
+                  <button onClick={onIncrement} className="text-2xl font-bold w-10 aspect-square p-1 rounded-full bg-white text-green-500 active:scale-95 transition">
+                    +
+                  </button>
+                </div>
+              </div>
+
+              <div className="w-full mt-4 text-center">
+                <button disabled={paymentMethodId === 0} onClick={() => setActiveTabId(1)} className="px-10 py-2.5 bg-blue-400 rounded-[5px] disabled:opacity-80 disabled:cursor-not-allowed">
+                  <span className="block text-white text-xl font-semibold leading-tight tracking-tight">
+                    Next
+                  </span>
+                </button>
+              </div>
+            </>
+          )}
+
+          {activeTabId === 1 && (
+            <div className="w-full text-center max-w-lg">
+              <h2 className="text-6xl font-bold">{formattedPrice.format(qty * 10000)}</h2>
+              <p className="mt-2">Lakukan pembayaran dengan nominal diatas.</p>
+
+              <div className="text-left mt-6 bg-white text-green-700 p-10 rounded-md">
+                <h6 className="text-2xl font-bold">Detail</h6>
+                <table className="w-full mt-2">
+                  <tbody>
+                    <tr>
+                      <td className="pr-4 py-1">Metode Pembayaran</td>
+                      <td className="pl-4 py-1">{paymentMethods[paymentMethodId - 1].name}</td>
+                    </tr>
+                    <tr>
+                      <td className="pr-4 py-1">Jumlah Tiket</td>
+                      <td className="pl-4 py-1">{qty}</td>
+                    </tr>
+                    <tr>
+                      <td className="pr-4 py-1">Harga Total</td>
+                      <td className="pl-4 py-1">{qty} x {formattedPrice.format(10000)}</td>
+                    </tr>
+                    <tr>
+                      <td className="pr-4 py-1"></td>
+                      <td className="pl-4 py-1 font-bold">{formattedPrice.format(qty * 10000)}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-left mt-2 italic">
+                <sup>*</sup>Silahkan klik tombol "Saya telah membayar" jika anda sudah melakukan pembayaran!
+              </p>
+              <div className="w-full flex justify-between mt-4 text-center">
+                <button onClick={() => setActiveTabId(0)} className="px-10 py-2.5 border-2 border-white rounded-[5px]">
+                  <span className="block text-white text-xl font-semibold leading-tight tracking-tight">
+                    Kembali
+                  </span>
+                </button>
+                <button onClick={() => setActiveTabId(1)} className="px-10 py-2.5 bg-blue-400 rounded-[5px]">
+                  <span className="block text-white text-xl font-semibold leading-tight tracking-tight">
+                    Saya telah membayar
+                  </span>
+                </button>
+              </div>
             </div>
-          </div>
+          )}
         </div>
-      </section>
+      </div>
     </div>
   );
 }

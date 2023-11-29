@@ -1,6 +1,56 @@
+'use client'
+
 import { IoTicketOutline } from "react-icons/io5";
+import { useEffect, useState } from "react";
+import { useParams, useRouter } from "next/navigation";
+import { Ticket } from "@/index.types";
+import { formatDate } from "@/lib/utils";
 
 function TicketDetailPage() {
+  const [ticket, setTicket] = useState<Ticket | null>(null);
+  const [loading, setLoading] = useState(false);
+  const query = useParams();
+
+  const navigate = useRouter();
+
+  useEffect(() => {
+    fetch('/api/ticket/' + query.id, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': ('Bearer ' + localStorage.getItem('token') || '').replaceAll('"', '')
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.status === 200) {
+          setTicket(res.data);
+          return;
+        }
+
+        if (res.status === 401) {
+          alert(`${res.status}: ${res.message}`);
+          localStorage.removeItem('user');
+          localStorage.removeItem('token');
+          window.location.href = '/login';
+          return;
+        }
+
+        alert(`${res.status}: ${res.message}`);
+        navigate.push('/');
+      })
+      .catch((error) => {
+        alert(`${error.status}: ${error.message}`);
+      })
+      .finally(() => setLoading(false));
+  }, [])
+
+  if (loading || ticket === null) return (
+    <div className="p-10 min-h-screen flex items-center justify-center">
+      <p className="text-xl animate-pulse">Loading...</p>
+    </div>
+  )
+
   return (
     <div className="px-20 mb-10 text-white">
       <div className="w-full flex flex-col items-center justify-center bg-green-700 rounded-2xl p-10 pb-20 mt-28">
@@ -23,7 +73,7 @@ function TicketDetailPage() {
                   name="name"
                   id="name"
                   placeholder="Masukan nama"
-                  value="Salman Miqdad"
+                  defaultValue={ticket.user.name}
                   className="w-full text-black border-2 border-black rounded-md px-4 py-2 font-bold"
                   readOnly
                 />
@@ -37,7 +87,7 @@ function TicketDetailPage() {
                   name="date"
                   id="date"
                   placeholder="Masukan nama"
-                  value="25, Nov 2023"
+                  defaultValue={formatDate(ticket!.date)}
                   className="w-full text-black border-2 border-black rounded-md px-4 py-2 font-bold"
                   readOnly
                 />
@@ -51,7 +101,7 @@ function TicketDetailPage() {
                   name="nohp"
                   id="nohp"
                   placeholder="Masukan nama"
-                  value="082316126449"
+                  defaultValue={ticket.user.phone}
                   className="w-full text-black border-2 border-black rounded-md px-4 py-2 font-bold"
                   readOnly
                 />
@@ -61,8 +111,14 @@ function TicketDetailPage() {
                 <h4>Jumlah Tiket</h4>
                 <div className="flex items-center justify-between py-2 px-2.5 bg-white text-black rounded-lg border-2 border-gray-700">
                   <IoTicketOutline fontSize={32} />
-                  <span className="block text-2xl font-bold">03</span>
+                  <span className="block text-2xl font-bold">{ticket.qty < 10 ? `0${ticket.qty}` : ticket.qty}</span>
                 </div>
+              </div>
+
+              <div className="absolute top-3 right-16">
+                <h2 className="text-2xl font-bold text-white">
+                  ID{`#${ticket!.id}`}
+                </h2>
               </div>
             </form>
           </div>

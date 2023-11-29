@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function BeliTiket() {
@@ -21,15 +22,15 @@ function BeliTiket() {
               </p>
             </div>
 
-            <a
-              href="/isiformtiket"
+            <Link
+              href="/buy-ticket"
               type="submit"
               className="px-20 py-6 bg-green-700 rounded-xl justify-center items-center gap-2.5 inline-flex mt-[25px]"
             >
               <span className="block text-white text-l font-semibold leading-tight tracking-tight">
                 BELI TIKET SEKARANG
               </span>
-            </a>
+            </Link>
           </div>
           <div className="mt-10">
             <div className="relative">

@@ -96,7 +96,7 @@ function Spot() {
               )}
             </div>
             {activeId > -1 && (
-              <div className="w-full relative max-w-[350px] aspect-video bg-gray-100/50 rounded overflow-hidden">
+              <div className="w-full relative max-w-[350px] aspect-video bg-gray-100/50 rounded overflow-hidden mr-10">
                 <video
                   className="absolute top-0 left-0 w-full h-full"
                   controls

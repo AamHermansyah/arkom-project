@@ -1,11 +1,8 @@
-import IsiForm from "@/components/Isiform";
+import Pembayaran from "@/components/Pembayaran";
+import React from "react";
 
 function page() {
-  return (
-    <div>
-      <IsiForm />
-    </div>
-  );
+  return <Pembayaran />;
 }
 
 export default page;

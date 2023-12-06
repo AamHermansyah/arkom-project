@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FramerMotionContext from '@/components/FramerMotionContext';
 
 export const metadata: Metadata = {
   title: 'Curug Badak',
@@ -19,7 +20,9 @@ export default function RootLayout({
       <body>
         <Navbar />
         <main className="relative overflow-hidden">
-          {children}
+          <FramerMotionContext>
+            {children}
+          </FramerMotionContext>
         </main>
         <Footer />
       </body>

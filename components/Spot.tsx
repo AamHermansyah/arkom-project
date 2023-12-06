@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import SpotSlider from './SpotSlider'
+import { motion } from 'framer-motion'
 
 // File video simpan di folder public seperti image
 const spots = [
@@ -77,19 +78,29 @@ function Spot() {
             <div>
               {activeId === -1 ? (
                 <>
-                  <h2 className="bold-40 lg:bold-64 text-white  max-w-3xl">
+                  <motion.h2
+                    className="bold-40 lg:bold-64 text-white  max-w-3xl"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: .6, ease: 'easeInOut' }}
+                  >
                     Daftar Spot Wisata Curug Badak
-                  </h2>
-                  <p className='text-xl  max-w-3xl mt-5' style={{ color: 'white' }}>
+                  </motion.h2>
+                  <motion.p
+                    className='text-xl  max-w-3xl mt-5' style={{ color: 'white' }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: .6, ease: 'easeInOut', delay: .3 }}
+                  >
                     Curug Badak. Kami menghadirkan panduan lengkap untuk berbagai lokasi menarik di Curug Badak yang akan memenuhi hasrat petualangan dan pengalaman alam Anda.
-                  </p>
+                  </motion.p>
                 </>
               ) : (
                 <>
-                  <h2 className="bold-40 lg:bold-64 text-white max-w-3xl">
+                  <h2 className="bold-40 lg:bold-64 text-white  max-w-3xl">
                     {spots[activeId].title}
                   </h2>
-                  <p className='text-xl max-w-3xl mt-5' style={{ color: 'white' }}>
+                  <p className='text-xl  max-w-3xl mt-5' style={{ color: 'white' }}>
                     {spots[activeId].description}
                   </p>
                 </>

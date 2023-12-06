@@ -84,7 +84,7 @@ function Pembayaran() {
 
   return (
     <div className="px-20 mb-10 text-white">
-      <div className="w-full flex flex-col items-center justify-center bg-green-700 rounded-2xl p-10 pb-20 mt-28">
+      <div className="w-full min-h-[535px] flex flex-col items-center justify-center bg-green-700 rounded-2xl p-10 pb-20 mt-28">
         <div className="w-full max-w-2xl mx-auto flex flex-col items-center gap-4">
           {activeTabId === 0 && (
             <>
